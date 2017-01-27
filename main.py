@@ -29,12 +29,12 @@ class MainHandler(webapp2.RequestHandler):
         
         
         submit = "<input type='submit'/>"
-        form = "<form method='post'>" + 
-            rot_label + textarerotation_input + "<br>" 
-            message_label + trxtarea + "<br>"
-            + submit + "</form>"
-
-        header = "<h2>Web Caesar</h2>"    
+        form = ("<form method='post'>" +
+                rot_label + rotation_input + "<br>" +
+                message_label + textarea + "<br>" +
+                submit + "</form>")
+                
+        header = "<h2>Web Caesar</h2>"
         self.response.write(header + form)
 
     def post(self):

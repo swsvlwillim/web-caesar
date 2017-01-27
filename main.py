@@ -21,11 +21,21 @@ import caesar
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         
-        rotation_input = "<iput type='number' name='rotation' />"
+        rot_label = "<label>Rotate by:</label>"
+        rotation_input = "<input type='number' name='rotation' />"
+        
+        message_label = "<label>Type a message:</label>"
         textarea = "<textarea name='message'>""</textarea>"
+        
+        
         submit = "<input type='submit'/>"
-        form = "<form method='post'>" + rotation_input + textarea + "<br>" + submit + "</form>"
-        self.response.write(form)
+        form = "<form method='post'>" + 
+            rot_label + textarerotation_input + "<br>" 
+            message_label + trxtarea + "<br>"
+            + submit + "</form>"
+
+        header = "<h2>Web Caesar</h2>"    
+        self.response.write(header + form)
 
     def post(self):
         message = self.request.get("message")
